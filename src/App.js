@@ -5,7 +5,7 @@ const App = () => {
   const [data, setData] = useState(null);
   const onClick = async () => {
     try {
-      const response = axios.get(
+      const response = await axios.get(
         'https://jsonplaceholder.typicode.com/todos/1',
       );
       setData(response.data);
